@@ -44,14 +44,14 @@ footer {
     color: white;
 }
 
-.vivek_profile {
-/* Style for the profile photo */
-    width: 150px; /* Set the width */
-    height: 150px; /* Set the height */
+.profile-photo{
+    width: 150px; /* Set the width to a typical Wikipedia profile image size */
+    height: 150px; /* Set the height to match the width (keeping it square) */
     border-radius: 50%; /* Circular image */
     float: left; /* Align the image to the left */
-    margin-right: 20px; /* Add some space between the image and text */
+    margin-right: 20px; /* Add some space between the image and the text */
     margin-top: 20px; /* Space from the top */
+    object-fit: cover; /* Ensures the image doesn't stretch/distort */
 }
 
 /* Make sure the header has enough space for the image */
