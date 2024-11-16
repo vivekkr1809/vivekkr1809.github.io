@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Python Data Types</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Introduction to Python Data Types</h1>
+        <p>Understanding the building blocks of Python programming.</p>
+    </header>
+
+    <!-- Blog Content -->
+    <article>
+        <section>
+            <h2>Part 1: Basic Types</h2>
+            <p>Python is known for being beginner-friendly, and one of the most fundamental concepts when learning any programming language is understanding its data types. Python supports several built-in data types that let you store values in various formats, like numbers, text, and more. In this blog, we’ll explore the most commonly used Python data types.</p>
+
+            <h3>Strings</h3>
+            <p>Strings in Python are used to represent textual data. You can create a string by enclosing a sequence of characters in either single quotes ('') or double quotes ("").</p>
+            <pre><code>str_var = "Ruchita"  # string &lt;str&gt;
+print(f"{str_var} is of type {type(str_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>Ruchita is of type &lt;class 'str'&gt;</code></pre>
+
+            <h3>Integers</h3>
+            <p>An integer (&lt;int&gt;) represents whole numbers, which can be positive or negative, and are not fractions.</p>
+            <pre><code>int_var = 10  # int
+print(f"{int_var} is of type {type(int_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>10 is of type &lt;class 'int'&gt;</code></pre>
+
+            <h3>Floats</h3>
+            <p>A float represents numbers that have a decimal point. Floats can represent real numbers (i.e., numbers that are not whole numbers).</p>
+            <pre><code>float_var = 1.3  # float
+print(f"{float_var} is of type {type(float_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>1.3 is of type &lt;class 'float'&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Part 2: Complex Numbers and Collections</h2>
+
+            <h3>Complex Numbers</h3>
+            <p>A complex number in Python has two parts: the real and the imaginary. The imaginary part is denoted with 'j'.</p>
+            <pre><code>complex_var = 1.0 + 1.0j  # complex
+print(f"{complex_var} is of type {type(complex_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>(1+1j) is of type &lt;class 'complex'&gt;</code></pre>
+
+            <h3>Lists</h3>
+            <p>A list is a mutable sequence of elements, which means that you can change the elements in the list after it’s created. Lists can hold items of any data type.</p>
+            <pre><code>list_var = [1, 2, 3]  # list
+print(f"{list_var} is of type {type(list_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>[1, 2, 3] is of type &lt;class 'list'&gt;</code></pre>
+
+            <h3>Tuples</h3>
+            <p>Tuples are similar to lists but are immutable, meaning their contents cannot be changed once they’re set.</p>
+            <pre><code>tuple_var = (1, 2)  # tuple
+print(f"{tuple_var} is of type {type(tuple_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>(1, 2) is of type &lt;class 'tuple'&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Part 3: Advanced Types</h2>
+
+            <h3>Ranges</h3>
+            <p>A range is an immutable sequence of numbers, commonly used for looping with 'for' loops. It represents a sequence of numbers from a starting point up to, but not including, an endpoint.</p>
+            <pre><code>range_var = range(1, 10)  # This is [1, 2, 3, 4, 5, 6, 7, 8, 9].
+print(f"{list(range_var)} is of type {type(range_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9] is of type &lt;class 'range'&gt;</code></pre>
+
+            <h3>Dictionaries</h3>
+            <p>A dictionary in Python is an unordered collection of key-value pairs. Each key is unique, and it maps to a specific value.</p>
+            <pre><code>dict_var = {"name": "Ruchita", "age": 27}  # dictionary
+print(f"{dict_var} is of type {type(dict_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>{'name': 'Ruchita', 'age': 27} is of type &lt;class 'dict'&gt;</code></pre>
+
+            <h3>Sets and Frozensets</h3>
+            <p>A set is an unordered collection of unique elements, and it is mutable. A frozenset, on the other hand, is an immutable version of a set.</p>
+            <pre><code>set_var = {1, 2, 3}  # set
+print(f"{set_var} is of type {type(set_var)}")
+
+frozen_set_var = frozenset({1, 2, 3})  # frozen set
+print(f"{frozen_set_var} is of type {type(frozen_set_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>{1, 2, 3} is of type &lt;class 'set'&gt;
+frozenset({1, 2, 3}) is of type &lt;class 'frozenset'&gt;</code></pre>
+
+            <h3>Booleans</h3>
+            <p>A boolean represents one of two values: True or False. These are often used for conditional statements and logical operations.</p>
+            <pre><code>bool_var = True  # bool
+print(f"{bool_var} is of type {type(bool_var)}")</code></pre>
+            <p>Output:</p>
+            <pre><code>True is of type &lt;class 'bool'&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Python offers a wide variety of data types to cater to different needs. In this blog, we explored the fundamental data types such as strings, integers, and floats, along with more complex data structures like lists, tuples, and dictionaries. Understanding these types is key to writing effective Python code, and in subsequent posts, we’ll explore how to work with them in depth, including manipulating and transforming data.</p>
+            <p>Stay tuned for more Python tutorials!</p>
+        </section>
+    </article>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact me: <a href="mailto:vivekkr1809@gmail.com">vivekkr1809@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript for Tab Switching (optional) -->
+    <script src="scripts.js"></script>
+</body>
+</html>
