@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Subscriptable and Mutable Python Data Types</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Understanding Subscriptable and Mutable Python Data Types</h1>
+        <p>A deeper dive into Python's data types and their behaviors.</p>
+    </header>
+
+    <!-- Blog Content -->
+    <article>
+        <section>
+            <h2>Part 1: Subscriptable vs Non-Subscriptable Data Types</h2>
+            <p>Python’s data types can be classified based on whether their elements can be accessed using an index or key. These are known as "subscriptable objects." Here’s a breakdown of which data types are subscriptable and which are not:</p>
+
+            <h3>Subscriptable Data Types</h3>
+            <p>Subscriptable objects are those whose elements can be accessed by indexing (using square brackets []). These types include:</p>
+            <ul>
+                <li><strong>Strings</strong>: You can access individual characters by index.</li>
+                <li><strong>Lists</strong>: You can access list elements by index.</li>
+                <li><strong>Tuples</strong>: Like lists, you can access tuple elements by index.</li>
+                <li><strong>Ranges</strong>: You can access individual numbers in a range by index.</li>
+                <li><strong>Dictionaries</strong>: You can access values by their keys.</li>
+            </ul>
+            <h3>Non-Subscriptable Data Types</h3>
+            <p>These data types do not allow access to elements via an index or key:</p>
+            <ul>
+                <li><strong>Integers</strong>: You cannot index integers.</li>
+                <li><strong>Floats</strong>: You cannot index floats.</li>
+                <li><strong>Booleans</strong>: You cannot index booleans.</li>
+                <li><strong>Sets</strong>: Sets are unordered collections, so indexing is not allowed.</li>
+                <li><strong>Frozensets</strong>: As immutable sets, frozensets do not support indexing.</li>
+            </ul>
+
+            <h3>Code Example: Accessing Subscriptable Data Types</h3>
+            <pre><code>
+print(f"Accessing first element of string '{str_var}': {str_var[0]}")
+print(f"Accessing first element of list '{list_var}': {list_var[0]}")
+print(f"Accessing first element of dict '{dict_var}': {dict_var['name']}")
+print(f"Accessing first element of range '{range_var}': {range_var[0]}")
+print(f"Accessing first element of tuple '{tuple_var}': {tuple_var[0]}")
+
+# Error for non-subscriptable types
+int_var[0]  # This will raise an error
+            </code></pre>
+            <p>In the above code, you can see how subscriptable objects allow access to elements using an index. However, attempting to index a non-subscriptable type (like an integer) will result in a TypeError.</p>
+
+        </section>
+
+        <section>
+            <h2>Part 2: Mutable vs Immutable Data Types</h2>
+            <p>Another important distinction in Python is whether data types are mutable or immutable. Understanding this difference is crucial when working with Python objects.</p>
+
+            <h3>Mutable Data Types</h3>
+            <p>Mutable data types are objects whose contents can be changed after they are created. In Python, lists and dictionaries are mutable types, which means you can modify their elements:</p>
+            <pre><code>
+print(list_var, "Original list_var")
+list_var[1] = 10
+print(list_var, "Changed list_var")
+
+print(dict_var, "Original dict_var")
+dict_var["name"] = "Vivek"
+dict_var["age"] = 29
+print(dict_var, "Changed dict_var")
+            </code></pre>
+            <p>Output:</p>
+            <pre><code>
+[1, 10, 3] "Changed list_var"
+{'name': 'Vivek', 'age': 29} "Changed dict_var"
+            </code></pre>
+
+            <h3>Immutable Data Types</h3>
+            <p>Immutable types cannot have their contents changed once they are assigned. Examples of immutable types in Python include strings and tuples:</p>
+            <pre><code>
+# Strings are immutable, so this will raise an error:
+str_var[0] = "V"  # Raises TypeError
+
+# Tuples are also immutable:
+tuple_var[0] = 10  # Raises TypeError
+            </code></pre>
+            <p>Attempting to modify a string or tuple will result in a <code>TypeError</code>, indicating that these data types cannot be changed after creation.</p>
+
+            <h3>Code Example: Attempting to Modify Immutable Types</h3>
+            <p>In the following code, we demonstrate that strings and tuples are immutable:</p>
+            <pre><code>
+str_var[0] = "V"  # This will raise an error
+tuple_var[0] = 10  # This will also raise an error
+            </code></pre>
+
+            <p>Trying to modify the contents of an immutable object directly (like changing a string or tuple element) is not allowed, which helps ensure the integrity of these data types in programs.</p>
+
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Python’s data types have different behaviors, especially when it comes to subscriptability and mutability. By understanding which data types are subscriptable, and which are mutable or immutable, you can write more efficient and predictable code. While subscriptable types let you access elements via indices or keys, mutable types give you the flexibility to change their contents, while immutable types provide security by preventing modifications after creation.</p>
+            <p>Stay tuned for more in-depth tutorials on Python's behavior and best practices!</p>
+        </section>
+    </article>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact me: <a href="mailto:vivekkr1809@gmail.com">vivekkr1809@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript for Any Optional Features (e.g., Tab Switching) -->
+    <script src="../scripts.js"></script>
+</body>
+</html>
