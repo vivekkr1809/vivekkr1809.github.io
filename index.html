@@ -13,18 +13,39 @@
         <img src="assets/vivek_profile.jpg" alt="Profile Photo" class="profile-photo">
     </header>
 
+    <!-- Tab Navigation -->
+    <nav class="tabs">
+        <ul>
+            <li class="tab active" onclick="showTab('About')">About Me</li>
+            <li class="tab" onclick="showTab('Publications')">Publications</li>
+            <li class="tab" onclick="showTab('Blog')">Blog</li>
+        </ul>
+    </nav>
+    
     <!-- Introduction Section -->
     <section id="introduction">
         <h2>Introduction</h2>
-        <p>Hello there!
+        <p>Hello there! <br>
 
-            I am Vivek, currently working as ML research scientist at KLA. I support the development of ML solutions to complement the metrology solution suites provided by KLA.
+            I am Vivek, currently working as ML research scientist at KLA. I support the development of ML solutions to complement the metrology solution suites provided by KLA.</p>
             
-            Prior to joining KLA, I was analytics & insights engineer at PARC/Eloque where  I supported the development of structural health monitoring metrics through physics- and data-driven approaches. My work focused on defining sensing architectures to monitor the health of bridges using advanced sensors, big data analytics, and numerical models to extract key structural responses of interest.
+            <p>Prior to joining KLA, I was analytics & insights engineer at PARC/Eloque where  I supported the development of structural health monitoring metrics through physics- and data-driven approaches. My work focused on defining sensing architectures to monitor the health of bridges using advanced sensors, big data analytics, and numerical models to extract key structural responses of interest.</p>
             
-            I completed my PhD and MS at Princeton University under the guidance of Prof. Branko Glišić. Prior to moving to US, I finished my undergraduate degree in Civil Engineering with Honors at IIT Bombay and a minor degree in Management from SJMSOM.
+            <p>I completed my PhD and MS at Princeton University under the guidance of Prof. Branko Glišić. Prior to moving to US, I finished my undergraduate degree in Civil Engineering with Honors at IIT Bombay and a minor degree in Management from SJMSOM.</p>
             
-            Thanks for visiting!</p>
+            <p>Thanks for visiting!</p>
+    </section>
+
+    <section id="publications" class="tab-content">
+        <h2>Publications</h2>
+        <ul>
+            <li><a href="https://www.mdpi.com/1424-8220/20/5/1386">Large-Area Resistive Strain Sensing Sheet for Structural Health Monitoring</a></li>
+            <li><a href="https://link.springer.com/article/10.1007/s13349-021-00498-5">Detecting, localizing, and quantifying damage using two-dimensional sensing sheet: lab test and field application</a></li>
+            <li><a href="https://www.mdpi.com/2072-4292/13/9/1846">Identifying Spatial and Temporal Variations in Concrete Bridges with Ground Penetrating Radar Attributes</a></li>
+            <li><a href="https://journals.sagepub.com/doi/abs/10.1177/1475921720976999">Predicting material properties of concrete from ground-penetrating radar attributes
+            </a></li>
+            <!-- Add more publications as you need -->
+        </ul>
     </section>
 
     <!-- Blog Section -->
@@ -40,5 +61,7 @@
     <footer>
         <p>Contact me: <a href="mailto:vivekkr1809@gmail.com">vivekkr1809@gmail.com</a></p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
