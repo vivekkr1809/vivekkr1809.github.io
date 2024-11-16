@@ -1,55 +1,67 @@
-/* Style for the tabs container */
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-photo {
+    width: 150px; /* Set the width */
+    height: 150px; /* Set the height */
+    border-radius: 50%; /* Circular image */
+    float: left; /* Align the image to the left */
+    margin-right: 20px; /* Add space between image and text */
+    margin-top: 20px; /* Space from the top */
+    object-fit: cover;
+    border: 3px solid #007bff; /* Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Navigation Tabs */
 .tabs {
     margin-top: 20px;
     border-bottom: 2px solid #ccc;
-    position: relative;
 }
 
-/* Dropdown Menu for mobile */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: relative;
-}
-
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown content on click */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Tabs links for larger screens */
-.tab-links {
+.tabs ul {
     list-style: none;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add spacing between tabs */
+}
+
+.tabs li {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tabs li:hover {
+    background-color: #ddd;
+    transform: translateY(-2px); /* Hover effect */
+}
+
+/* Active Tab Style */
+.tabs li.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Style for the tab content */
+.tab-content {
+    display: none;  /* Hide tab content by default */
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* When a tab-content has the 'active' class, display it */
+.tab-content.active {
+    display: block;  /* Show the active tab content */
 }
 
 body {
@@ -76,405 +88,180 @@ header h1 {
     font-size: 2.5rem;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+header p {
+    font-size: 1.1rem;
+    color: #8e9c9f; /* Light grey-blue */
 }
 
-/* Show the dropdown content on click */
-.dropdown:hover .dropdown-content {
-    display: block;
+/* Article */
+article {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Tabs links for larger screens */
-.tab-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Add spacing between tabs */
+h2 {
+    color: #7f5d9f; /* Soft pastel lavender */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e3d9f7; /* Light pastel lavender */
 }
 
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Mobile screen specific */
-@media (max-width: 768px) {
-    .tab-links {
-        display: none; /* Hide tabs on small screens */
-    }
-
-    .dropdown {
-        display: block; /* Show the dropdown for mobile screens */
-    }
-}
-
-/* Tab content display */
-.tab-content {
-    display: none;  /* Hide tab content by default */
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Active tab style */
-.tab-content.active {
-    display: block;  /* Show active tab content */
-}
-/* Style for the tabs container */
-.tabs {
-    margin-top: 20px;
-    border-bottom: 2px solid #ccc;
-    position: relative;
-}
-
-/* Dropdown Menu for mobile */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: relative;
-}
-
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
+pre {
     background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown content on click */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Tabs links for larger screens */
-.tab-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Add spacing between tabs */
-}
-
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Mobile screen specific */
-@media (max-width: 768px) {
-    .tab-links {
-        display: none; /* Hide tabs on small screens */
-    }
-
-    .dropdown {
-        display: block; /* Show the dropdown for mobile screens */
-    }
-}
-
-/* Tab content display */
-.tab-content {
-    display: none;  /* Hide tab content by default */
+    border: 1px solid #e0e0e0;
     padding: 20px;
-    background-color: #fafafa;
     border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Active tab style */
-.tab-content.active {
-    display: block;  /* Show active tab content */
-}
-/* Style for the tabs container */
-.tabs {
     margin-top: 20px;
-    border-bottom: 2px solid #ccc;
-    position: relative;
+    margin-bottom: 20px;
+    overflow-x: auto;
 }
 
-/* Dropdown Menu for mobile */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: relative;
+code {
+    font-family: 'Courier New', monospace;
+    color: #6a6a6a;
 }
 
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f8ff; /* Pastel light blue */
+    margin-top: 40px;
+    font-size: 0.9rem;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+footer a {
+    color: #7f5d9f; /* Soft pastel lavender */
     text-decoration: none;
-    display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+footer a:hover {
+    text-decoration: underline;
 }
 
-/* Show the dropdown content on click */
-.dropdown:hover .dropdown-content {
-    display: block;
+/* Buttons & Links */
+a {
+    color: #5d9e9e; /* Soft pastel teal */
+    transition: color 0.3s ease;
 }
 
-/* Tabs links for larger screens */
-.tab-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Add spacing between tabs */
+a:hover {
+    color: #2a7f7f; /* Darker teal for hover */
 }
 
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Mobile screen specific */
-@media (max-width: 768px) {
-    .tab-links {
-        display: none; /* Hide tabs on small screens */
-    }
-
-    .dropdown {
-        display: block; /* Show the dropdown for mobile screens */
-    }
-}
-
-/* Tab content display */
-.tab-content {
-    display: none;  /* Hide tab content by default */
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Active tab style */
-.tab-content.active {
-    display: block;  /* Show active tab content */
-}
-/* Style for the tabs container */
-.tabs {
-    margin-top: 20px;
-    border-bottom: 2px solid #ccc;
-    position: relative;
-}
-
-/* Dropdown Menu for mobile */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: relative;
-}
-
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
+button {
+    background-color: #f1c1c1; /* Soft pastel peach */
     border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown content on click */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Tabs links for larger screens */
-.tab-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Add spacing between tabs */
-}
-
-.tab {
     padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
-    background-color: #f4f4f4;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Mobile screen specific */
-@media (max-width: 768px) {
-    .tab-links {
-        display: none; /* Hide tabs on small screens */
-    }
-
-    .dropdown {
-        display: block; /* Show the dropdown for mobile screens */
-    }
+button:hover {
+    background-color: #d89e9e; /* Slightly darker pastel peach */
 }
 
-/* Tab content display */
-.tab-content {
-    display: none;  /* Hide tab content by default */
+/* Minimalist Layout */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fafafa;
-    border-radius: 5px;
-    margin-top: 10px;
 }
 
-/* Active tab style */
-.tab-content.active {
-    display: block;  /* Show active tab content */
-}
-/* Style for the tabs container */
-.tabs {
-    margin-top: 20px;
-    border-bottom: 2px solid #ccc;
-    position: relative;
+section {
+    margin-bottom: 40px;
 }
 
-/* Dropdown Menu for mobile */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: relative;
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+ul li {
+    margin-bottom: 10px;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
+.separator {
+    border-top: 2px solid #e3d9f7;
+    margin: 20px 0;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown content on click */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Tabs links for larger screens */
-.tab-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Add spacing between tabs */
-}
-
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Mobile screen specific */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .tab-links {
-        display: none; /* Hide tabs on small screens */
+    body {
+        padding: 10px;
     }
 
-    .dropdown {
-        display: block; /* Show the dropdown for mobile screens */
+    header h1 {
+        font-size: 2rem; /* Smaller header size on mobile */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller section titles */
+    }
+
+    article {
+        padding: 10px; /* Add padding for mobile */
+    }
+
+    pre {
+        padding: 10px;
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+
+    button {
+        width: 100%; /* Make buttons full-width on mobile */
+        padding: 15px;
+    }
+
+    /* Stack navigation tabs vertically */
+    .tabs ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabs li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    /* Adjust content display for smaller screens */
+    .tab-content {
+        padding: 15px;
+    }
+
+    .profile-photo {
+        width: 100px; /* Smaller profile image */
+        height: 100px;
+        margin-top: 10px;
     }
 }
 
-/* Tab content display */
-.tab-content {
-    display: none;  /* Hide tab content by default */
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 5px;
-    margin-top: 10px;
-}
+/* Very small screens, below 480px */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
 
-/* Active tab style */
-.tab-content.active {
-    display: block;  /* Show active tab content */
+    header h1 {
+        font-size: 1.5rem; /* Further reduce header size */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Smaller titles */
+    }
+
+    footer {
+        font-size: 0.7rem; /* Further reduce footer text */
+    }
 }
