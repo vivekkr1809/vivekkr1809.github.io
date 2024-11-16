@@ -18,9 +18,20 @@
 }
 
 /* Navigation Tabs */
-.tabs {
-    margin-top: 20px;
-    border-bottom: 2px solid #ccc;
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tab-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add spacing between tabs */
 }
 
 .tabs ul {
@@ -305,4 +316,15 @@ ul li {
 /* Show the dropdown content on click */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Mobile screen specific */
+@media (max-width: 768px) {
+    .tab-links {
+        display: none; /* Hide tabs on small screens */
+    }
+
+    .dropdown {
+        display: block; /* Show the dropdown for mobile screens */
+    }
 }
