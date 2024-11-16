@@ -38,20 +38,18 @@
     transform: translateY(-2px); /* Hover effect */
 }
 
-.tabs .active {
-    background-color: #007bff; /* Active tab color */
-    color: white; /* Active tab text color */
-    font-weight: bold;
-}
-
-/* Tab Content */
+/* Style for the tab content */
 .tab-content {
-    display: none;
+    display: none;  /* Hide tab content by default */
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #fafafa;
     border-radius: 5px;
     margin-top: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* When a tab-content has the 'active' class, display it */
+.tab-content.active {
+    display: block;  /* Show the active tab content */
 }
 
 .tab-content.active {
