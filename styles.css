@@ -1,6 +1,4 @@
-/* styles.css */
-
-/* Style for profile photo */
+/* Profile Photo */
 .profile-photo {
     width: 150px; /* Set the width */
     height: 150px; /* Set the height */
@@ -9,9 +7,11 @@
     margin-right: 20px; /* Add space between image and text */
     margin-top: 20px; /* Space from the top */
     object-fit: cover;
+    border: 3px solid #007bff; /* Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-/* Style for the navigation bar (tabs) */
+/* Navigation Tabs */
 .tabs {
     margin-top: 20px;
     border-bottom: 2px solid #ccc;
@@ -21,51 +21,82 @@
     list-style: none;
     padding: 0;
     display: flex;
+    justify-content: center;
+    gap: 10px; /* Add spacing between tabs */
 }
 
 .tabs li {
     padding: 10px 20px;
     cursor: pointer;
     background-color: #f4f4f4;
-    margin-right: 10px;
     border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .tabs li:hover {
     background-color: #ddd;
+    transform: translateY(-2px); /* Hover effect */
 }
 
 .tabs .active {
-    background-color: #ccc;
+    background-color: #007bff; /* Active tab color */
+    color: white; /* Active tab text color */
     font-weight: bold;
 }
 
-/* Style for the tab content */
+/* Tab Content */
 .tab-content {
     display: none;
     padding: 20px;
-    background-color: #fafafa;
+    background-color: #f9f9f9;
     border-radius: 5px;
     margin-top: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .tab-content.active {
     display: block;
 }
 
-/* Style for section titles */
+/* Section Titles */
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-/* Style for links */
+/* Links */
 a {
     color: #007bff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #0056b3; /* Darker hover color */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    border-top: 2px solid #ccc;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
