@@ -19,7 +19,7 @@ function showTab(tabName) {
     }
 
     // Update the active tab
-    const activeTab = document.querySelector(`.tab[onclick="showTab('${tabName}')"]`);
+    const activeTab = document.querySelector(`.tab[data-tab="${tabName}"]`);
     if (activeTab) {
         activeTab.classList.add('active');  // Highlight the clicked tab
     }
