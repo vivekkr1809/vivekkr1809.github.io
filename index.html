@@ -16,21 +16,10 @@
 
     <!-- Tab Navigation -->
     <nav class="tabs">
-        <!-- Dropdown for mobile view -->
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-                <a href="javascript:void(0);" onclick="showTab('about')">About Me</a>
-                <a href="javascript:void(0);" onclick="showTab('publications')">Publications</a>
-                <a href="javascript:void(0);" onclick="showTab('blog')">Blog</a>
-            </div>
-        </div>
-    
-        <!-- Tab Links for larger screens -->
-        <ul class="tab-links">
-            <li class="tab active" data-tab="about" onclick="showTab('about')">About Me</li>
-            <li class="tab" data-tab="publications" onclick="showTab('publications')">Publications</li>
-            <li class="tab" data-tab="blog" onclick="showTab('blog')">Blog</li>
+        <ul>
+            <li class="tab active" onclick="showTab('about')">About Me</li>
+            <li class="tab" onclick="showTab('publications')">Publications</li>
+            <li class="tab" onclick="showTab('blog')">Blog</li>
         </ul>
     </nav>
     <!-- About Section -->
