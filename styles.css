@@ -49,255 +49,31 @@
 .tab-links {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Add spacing between tabs */
+    box-sizing: border-box;
 }
 
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Mobile screen specific */
-@media (max-width: 768px) {
-    .tab-links {
-        display: none; /* Hide tabs on small screens */
-    }
-
-    .dropdown {
-        display: block; /* Show the dropdown for mobile screens */
-    }
-}
-
-/* Tab content display */
-.tab-content {
-    display: none;  /* Hide tab content by default */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f9f9; /* Pastel light greyish blue */
+    color: #333;
+    line-height: 1.6;
     padding: 20px;
-    background-color: #fafafa;
-    border-radius: 5px;
-    margin-top: 10px;
 }
 
-/* Active tab style */
-.tab-content.active {
-    display: block;  /* Show active tab content */
-}
-/* Style for the tabs container */
-.tabs {
-    margin-top: 20px;
-    border-bottom: 2px solid #ccc;
-    position: relative;
+h1, h2 {
+    font-weight: bold;
+    color: #3a4a5a; /* Darker grey for text contrast */
 }
 
-/* Dropdown Menu for mobile */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: relative;
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown content on click */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Tabs links for larger screens */
-.tab-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Add spacing between tabs */
-}
-
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Mobile screen specific */
-@media (max-width: 768px) {
-    .tab-links {
-        display: none; /* Hide tabs on small screens */
-    }
-
-    .dropdown {
-        display: block; /* Show the dropdown for mobile screens */
-    }
-}
-
-/* Tab content display */
-.tab-content {
-    display: none;  /* Hide tab content by default */
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Active tab style */
-.tab-content.active {
-    display: block;  /* Show active tab content */
-}
-/* Style for the tabs container */
-.tabs {
-    margin-top: 20px;
-    border-bottom: 2px solid #ccc;
-    position: relative;
-}
-
-/* Dropdown Menu for mobile */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: relative;
-}
-
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown content on click */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Tabs links for larger screens */
-.tab-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Add spacing between tabs */
-}
-
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Mobile screen specific */
-@media (max-width: 768px) {
-    .tab-links {
-        display: none; /* Hide tabs on small screens */
-    }
-
-    .dropdown {
-        display: block; /* Show the dropdown for mobile screens */
-    }
-}
-
-/* Tab content display */
-.tab-content {
-    display: none;  /* Hide tab content by default */
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Active tab style */
-.tab-content.active {
-    display: block;  /* Show active tab content */
-}
-/* Style for the tabs container */
-.tabs {
-    margin-top: 20px;
-    border-bottom: 2px solid #ccc;
-    position: relative;
-}
-
-/* Dropdown Menu for mobile */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: relative;
-}
-
-.dropbtn {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+header h1 {
+    color: #5d9e9e; /* Soft pastel teal */
+    font-size: 2.5rem;
 }
 
 .dropdown-content a:hover {
