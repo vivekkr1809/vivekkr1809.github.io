@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding For and While Loops in Python</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Understanding For and While Loops in Python</h1>
+        <p>Master the concepts of loops in Python to automate repetitive tasks and iterate over sequences effectively.</p>
+    </header>
+
+    <!-- Blog Content -->
+    <article>
+        <section>
+            <h2>Part 1: Python For Loops</h2>
+            <p>In Python, the <code>for</code> loop is used to iterate over a sequence (like a list, tuple, dictionary, string, etc.). Python’s <code>for</code> loop is more akin to a <code>foreach</code> loop in other languages, where each element in the sequence is accessed one by one.</p>
+
+            <h3>Basic For Loop Example</h3>
+            <p>Here’s an example of a simple <code>for</code> loop that prints the square of numbers from 0 to 9:</p>
+            <pre><code>
+for i in range(10):
+    print(i**2)  # Prints i squared for i from 0 to 9
+            </code></pre>
+            <p>This loop iterates through numbers from 0 to 9 and prints the square of each number. The <code>range()</code> function generates a sequence of numbers, and you can control the start, stop, and step size as needed.</p>
+
+            <h3>Using Range with Step Size</h3>
+            <p>The <code>range()</code> function can also accept a step size, allowing you to control the intervals between numbers. Let’s take a look at a few examples:</p>
+            <pre><code>
+for i in range(5, 10):  # From 5 to 9
+    print(i**2)
+
+for i in range(5, 10, 5):  # From 5 to 9 with step size of 5
+    print(i**2)
+
+for i in range(9, -1, -1):  # From 9 to 0 with step size of -1
+    print(i**2)
+            </code></pre>
+            <p>In the first example, the loop iterates over numbers from 5 to 9. In the second example, the step size is 5, so only 5 and 10 are printed. The third example demonstrates iteration in reverse order, printing squares of numbers from 9 down to 0.</p>
+
+            <h3>Iterating Over Subscriptable Objects</h3>
+            <p>Python allows you to loop over any subscriptable object (objects that can be indexed, such as lists, tuples, or dictionaries). Here’s how you can loop over different data types:</p>
+            <pre><code>
+# Looping over a list
+for i in list_var:
+    print(i)
+
+# Looping over a tuple
+for i in tuple_var:
+    print(i)
+
+# Looping over a dictionary
+for key, value in dict_var.items():
+    print(f"{key}: {value}")
+            </code></pre>
+            <p>As shown, you can easily iterate over a list or tuple using a <code>for</code> loop. For dictionaries, you can loop over both the keys and values using <code>items()</code>.</p>
+
+            <h3>Using Enumerate for Indexing</h3>
+            <p>If you want to keep track of the index while iterating, you can use Python’s <code>enumerate()</code> function. It adds an index to each element in the sequence:</p>
+            <pre><code>
+for idx, value in enumerate(list_var):
+    print(f"The {idx} element is {value}")
+
+for idx, value in enumerate(tuple_var):
+    print(f"The {idx} element is {value}")
+
+for idx, (key, value) in enumerate(dict_var.items()):
+    print(f"The {idx} element is {key}: {value}")
+            </code></pre>
+            <p>In each of these examples, <code>enumerate()</code> provides both the index (position) and the value (element), which is useful when you need both.</p>
+
+        </section>
+
+        <section>
+            <h2>Part 2: Python While Loops</h2>
+            <p>In Python, the <code>while</code> loop repeatedly executes a block of code as long as a given condition is <code>True</code>. Once the condition becomes <code>False</code>, the loop stops executing.</p>
+
+            <h3>Basic While Loop Example</h3>
+            <p>Here’s an example of a <code>while</code> loop that prints numbers from 10 to 1:</p>
+            <pre><code>
+i = 10
+while i > 0:
+    print(i)
+    i -= 1  # Decrease i by 1
+            </code></pre>
+            <p>This loop will print numbers from 10 down to 1. The loop continues as long as the condition <code>i > 0</code> is <code>True</code>, and the value of <code>i</code> is decremented by 1 after each iteration.</p>
+
+            <h3>Common Uses of While Loops</h3>
+            <p><code>while</code> loops are especially useful when you don’t know how many iterations you need in advance (e.g., reading from a file until the end, or waiting for user input).</p>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Python’s <code>for</code> and <code>while</code> loops are powerful tools for automating repetitive tasks and iterating over data. Understanding how to use both types of loops effectively will make your Python code more efficient and concise.</p>
+            <p>Keep practicing with these loops, and soon you’ll be writing clean, effective Python code that can tackle a wide range of tasks.</p>
+        </section>
+
+        <section>
+            <h2>Exercises</h2>
+            <p>Try solving the following exercises to further practice your understanding of loops:</p>
+            <ul>
+                <li><strong>Exercise 1:</strong> Write a <code>for</code> loop that prints the sum of squares of numbers from 1 to 20.</li>
+                <li><strong>Exercise 2:</strong> Create a <code>while</code> loop that prints all even numbers between 1 and 50.</li>
+                <li><strong>Exercise 3:</strong> Write a program that uses a <code>for</code> loop to print the keys and values of a dictionary in reverse order.</li>
+                <li><strong>Exercise 4:</strong> Use the <code>enumerate()</code> function to print the index and value of each character in the string <code>"Python"</code>.</li>
+            </ul>
+        </section>
+    </article>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact me: <a href="mailto:vivekkr1809@gmail.com">vivekkr1809@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript for Any Optional Features (e.g., Tab Switching) -->
+    <script src="../scripts.js"></script>
+</body>
+</html>
